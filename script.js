@@ -8,9 +8,29 @@ function buildGrid() {
     }
 }
 
-window.onload = function () {
-    buildGrid();
+function getNumer() {
+    let num = prompt('Enter how big the grid should be. 1-64');
+    buildCustomGrid(num);
+}
 
+function buildCustomGrid(num) {
+    let numSqrd = num*num;
+    for (let i = 0; i < numSqrd; i++) {
+        const container2 = document.getElementById('gridContainer');
+        const div = document.createElement('div');
+        container2.appendChild(div);
+
+        //change root CSS variable to equal num
+        let root = document.documentElement;
+        root.style.setProperty('--grid-size', num);
+        
+        div.classList.add('grid-item');
+    }
+}
+
+window.onload = function () {
+   //buildGrid();
+    getNumer();
     // Event Listener - When button is clicked
     const button = document.querySelectorAll('button');
     button.forEach((event) => {

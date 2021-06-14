@@ -11,3 +11,11 @@ Lessons learned:
             -must be defined first before window.onload
     -hard code what you can, dont make it harder on myself by making everything load in JS and dynamic
         -ex: making the divs display:grid and styling the new divs being created
+
+
+
+TODO:
+    -make a clear grid button
+    -add user input functionality to determine grid size
+        -change the for loop counter in buildGrid function
+        -change the number in the repeating function in grid-template-rows/columns
